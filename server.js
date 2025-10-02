@@ -1,0 +1,120 @@
+const express = require('express');
+// const bodyParser = require('body-parser'); // body-parser ya está incluido en las versiones modernas de Express.
+require('dotenv').config(); // Carga las variables de entorno desde el archivo .env
+const nodemailer = require('nodemailer');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+// 1. Inicialización de la aplicación Express
+const app = express();
+// Es una buena práctica usar una variable de entorno para el puerto, con un valor por defecto.
+const PORT = process.env.PORT || 3000;
+
+// 2. Middlewares (configuraciones)
+// CORS: Permite peticiones desde otros orígenes (nuestro frontend)
+app.use(cors());
+// Middlewares nativos de Express para parsear JSON y datos de formularios.
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Ruta raíz para verificar que el servidor está funcionando
+// --- INICIO DE LA MODIFICACIÓN ---
+// Esta es la nueva ruta que añadimos.
+// Responde a las peticiones GET en la raíz ('/') para que no veas el error "Cannot GET /".
+app.get('/', (req, res) => {
+    res.status(200).send(`
+        <h1>¡El servidor del Mundo Automotriz está en línea!</h1>
+        <p>El servidor está funcionando correctamente y listo para recibir mensajes desde el formulario de contacto en la ruta /api/contacto.</p>
+    `);
+});
+// --- FIN DE LA MODIFICACIÓN ---
+
+// --- INICIO DE LA CONFIGURACIÓN DE MONGODB ---
+
+// Conectar a MongoDB Atlas
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log('Conectado a MongoDB Atlas exitosamente.'))
+    .catch(err => console.error('Error al conectar a MongoDB:', err));
+
+// Definir el esquema para los mensajes de contacto
+const mensajeSchema = new mongoose.Schema({
+    nombre: { type: String, required: true },
+    email: { type: String, required: true },
+    asunto: { type: String },
+    mensaje: { type: String, required: true },
+    fecha: { type: Date, default: Date.now }
+});
+
+// Crear el modelo a partir del esquema
+// Mongoose creará una colección llamada 'mensajes' (plural y en minúsculas)
+const Mensaje = mongoose.model('Mensaje', mensajeSchema);
+
+// --- FIN DE LA CONFIGURACIÓN DE MONGODB ---
+
+
+
+
+// 3. Definición de la ruta para el formulario de contacto
+app.post('/api/contacto', async (req, res) => { // Convertimos la función a async para usar await
+    // req.body contiene los datos enviados desde el formulario del frontend
+    const { nombre, email, asunto, mensaje } = req.body;
+
+    // Validación simple en el servidor
+    if (!nombre || !email || !mensaje) {
+        return res.status(400).json({ success: false, message: 'Por favor, completa todos los campos requeridos.' });
+    }
+
+    try {
+        // --- 1. Guardar en la Base de Datos (Paso Crítico) ---
+        const nuevoMensaje = new Mensaje({ nombre, email, asunto, mensaje });
+        await nuevoMensaje.save();
+        console.log('Mensaje guardado en la base de datos.');
+
+        // --- 2. Enviar Email (Paso Opcional) ---
+        // Solo intentamos enviar el email si el guardado en la BD fue exitoso.
+        
+        // Descomenta el siguiente bloque si quieres que también se envíe el email.
+        /*
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.GMAIL_USER,
+                pass: process.env.GMAIL_PASS
+            }
+        });
+
+        const mailOptions = {
+            from: `"${nombre}" <${process.env.GMAIL_USER}>`,
+            to: process.env.MAIL_RECEIVER,
+            replyTo: email,
+            subject: `Nuevo mensaje de contacto: ${asunto}`,
+            html: `
+                <h2>Has recibido un nuevo mensaje desde tu web "Mundo Automotriz"</h2>
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Asunto:</strong> ${asunto}</p>
+                <hr>
+                <h3>Mensaje:</h3>
+                <p>${mensaje}</p>
+            `
+        };
+
+        await transporter.sendMail(mailOptions);
+        console.log('Notificación por correo enviada exitosamente.');
+        */
+
+        // Enviamos una respuesta exitosa al frontend
+        res.status(200).json({ success: true, message: '¡Mensaje recibido con éxito! Gracias por contactarnos.' });
+
+    } catch (error) {
+        console.error('Error en el proceso de contacto:', error);
+        // Enviamos una respuesta de error al frontend
+        res.status(500).json({ success: false, message: 'Hubo un error al procesar tu mensaje. Por favor, inténtalo de nuevo más tarde.' });
+    }
+});
+
+// 4. Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log('Esperando peticiones para el formulario de contacto...');
+});
