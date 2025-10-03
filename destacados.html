@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modelos Destacados - Mundo Automotriz</title>
+        <link rel="stylesheet" href="estilos.css" />
+        <!-- Spline Viewer -->
+        <script
+            type="module"
+            src="https://esm.sh/@splinetool/viewer"
+        ></script>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Fondo 3D con Spline (igual que en index.html) -->
+        <spline-viewer
+            url="https://prod.spline.design/b422-RI72YvSG3Zp/scene.splinecode"
+            events-target="local"
+        ></spline-viewer>
+
+        <main id="page-content">
+            <!-- Cabecera (reutilizada) -->
+            <header>
+                <div class="header-content container">
+                    <a href="/index.html" class="logo"
+                        ><h1>Mundo Automotriz</h1></a
+                    >
+                    <nav>
+                        <ul>
+                            <li><a href="/index.html">Inicio</a></li>
+                            <li><a href="/blog.html">Blog</a></li>
+                            <li><a href="/marcas.html">Marcas</a></li>
+                            <li><a href="/destacados.html">Destacados</a></li>
+                            <li><a href="/index.html#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    <button class="mobile-menu-btn" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Contenido Principal de Modelos Destacados -->
+            <section id="destacados-page" style="padding-top: 10rem">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Modelos Destacados</h2>
+                        <p>
+                            Una colección de máquinas que han marcado una época
+                            por su diseño, rendimiento o innovación.
+                        </p>
+                    </div>
+
+                    <!-- Modelo 1: Audi e-tron GT -->
+                    <div class="featured-car-container mb-3">
+                        <div class="featured-car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1631125915902-d8abe9350b9a?w=1200&q=80"
+                                alt="Audi e-tron GT"
+                                class="rounded-lg shadow-xl"
+                            />
+                        </div>
+                        <div class="featured-car-info">
+                            <p class="featured-car-brand">Audi</p>
+                            <h3>Audi e-tron GT</h3>
+                            <p>
+                                El Audi e-tron GT representa la fusión perfecta
+                                entre rendimiento eléctrico y diseño Gran
+                                Turismo. Redefine lo que un coche eléctrico
+                                puede ser: emocionante y lujoso.
+                            </p>
+                            <div class="featured-car-specs">
+                                <div class="spec-item">
+                                    <i class="fa-solid fa-horse-head"></i>
+                                    <span>Potencia</span>
+                                    <strong>Hasta 646 CV</strong>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    <span>0-100 km/h</span>
+                                    <strong>3.3s</strong>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fa-solid fa-bolt-lightning"></i>
+                                    <span>Autonomía</span>
+                                    <strong>488 km (WLTP)</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modelo 2: Porsche 911 Clásico -->
+                    <div class="featured-car-container">
+                        <div class="featured-car-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80"
+                                alt="Porsche 911 Clásico"
+                                class="rounded-lg shadow-xl"
+                            />
+                        </div>
+                        <div class="featured-car-info">
+                            <p class="featured-car-brand">Porsche</p>
+                            <h3>Porsche 911 Clásico</h3>
+                            <p>
+                                Un icono atemporal del diseño y la ingeniería
+                                automotriz. Su silueta inconfundible y su motor
+                                bóxer trasero han enamorado a generaciones de
+                                conductores.
+                            </p>
+                            <div class="featured-car-specs">
+                                <div class="spec-item">
+                                    <i class="fa-solid fa-car-side"></i>
+                                    <span>Motor</span>
+                                    <strong>6 Cil. Bóxer</strong>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span>Época</span>
+                                    <strong>1964 - 1989</strong>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>Legado</span>
+                                    <strong>Eterno</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

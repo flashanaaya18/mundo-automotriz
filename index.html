@@ -1,303 +1,1028 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Automotriz - Todo sobre Coches</title>
-    <link rel="stylesheet" href="estilos.css">
-    <!-- Solución al error de Favicon: Añadimos un ícono vacío para que el navegador no lo busque -->
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <!-- Spline Viewer -->
-    <!-- Solución al error de CORS: Cambiamos el CDN de unpkg a esm.sh -->
-    <script type="module" src="https://esm.sh/@splinetool/viewer"></script>
-    <!-- Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <!-- Fondo 3D con Spline -->
-    <!-- Añadimos 'events-target="local"' para desactivar las interacciones y eliminar las advertencias de 'passive event listener' -->
-    <spline-viewer url="https://prod.spline.design/b422-RI72YvSG3Zp/scene.splinecode" events-target="local"></spline-viewer>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mundo Automotriz - Todo sobre Coches</title>
+        <link rel="stylesheet" href="estilos.css" />
+        <!-- Solución al error de Favicon: Añadimos un ícono vacío para que el navegador no lo busque -->
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- Spline Viewer -->
+        <!-- Solución al error de CORS: Cambiamos el CDN de unpkg a esm.sh -->
+        <script type="module" src="https://esm.sh/@splinetool/viewer"></script>
+        <!-- Google Fonts: Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome para iconos -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Fondo 3D con Spline -->
+        <spline-viewer
+            url="https://prod.spline.design/b422-RI72YvSG3Zp/scene.splinecode"
+            events-target="local"
+        ></spline-viewer>
 
-<main id="page-content">
-    <!-- Cabecera de la página -->
-    <header>
-        <div class="header-content container">
-            <a href="#inicio" class="logo"><h1>Mundo Automotriz</h1></a>
-            <nav>
-                <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#marcas">Marcas</a></li>
-                <li><a href="#tecnologia">Tecnología</a></li>
-                <li><a href="#competicion">Competición</a></li>
-                <li><a href="#futuro">Futuro</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
-        </div>
-    </header>
-
-    <!-- Sección de Inicio -->
-    <section id="inicio" class="hero">
-        <div class="hero-content container">
-            <h2>Bienvenido al Mundo Automotriz</h2>
-            <p>Explora el fascinante universo de los automóviles, desde sus orígenes hasta las tecnologías del futuro.</p>
-            <a href="#historia" class="btn btn-lg">Comenzar a Explorar</a>
-        </div>
-    </section>
-
-    <!-- Sección de Historia -->
-    <section id="historia">
-        <div class="container">
-            <div class="section-title">
-                <h2>Historia del Automóvil</h2>
-                <p>Un viaje desde el primer motor de combustión hasta la era de la electrificación y la conectividad.</p>
-            </div>
-            <h3>Los Primeros Automóviles</h3>
-            <p>El automóvil, tal como lo conocemos hoy, fue inventado a finales del siglo XIX. El primer vehículo motorizado fue creado por Karl Benz en 1886.</p>
-            <img src="https://images.unsplash.com/photo-1615237901394-24d116169a26?w=500&h=300&fit=crop" alt="Primer automóvil de Karl Benz" class="rounded-lg shadow-lg mb-3" style="max-width: 100%; height: auto;">
-            
-            <h3>Evolución a Través del Tiempo</h3>
-            <p>A lo largo del siglo XX, el automóvil experimentó una evolución constante, pasando de ser un lujo para pocos a un medio de transporte masivo.</p>
-            <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3a7?w=500&h=300&fit=crop" alt="Evolución del automóvil" class="rounded-lg shadow-lg mb-3" style="max-width: 100%; height: auto;">
-
-            <p>Desde la producción en cadena de Henry Ford que democratizó el acceso al automóvil, pasando por la era dorada del diseño en los 50 y 60, hasta la crisis del petróleo que impulsó la eficiencia en los 70. El final del siglo XX vio la llegada de la electrónica, y el siglo XXI nos ha traído la era de la conectividad, los vehículos híbridos, eléctricos y el inicio de la conducción autónoma.</p>
-            
-            <h3>Inventores Pioneros</h3>
-            <p>Estos son algunos de los nombres que cambiaron el mundo sobre ruedas.</p>
-            <ul>
-                <li><strong>Karl Benz</strong> - Creador del primer automóvil con motor de combustión interna (1886)</li>
-                <li><strong>Gottlieb Daimler</strong> - Desarrolló el primer motor de cuatro tiempos (1889)</li>
-                <li><strong>Henry Ford</strong> - Revolucionó la producción con la cadena de montaje (1913)</li>
-                <li><strong>Ferdinand Porsche</strong> - Diseñador del Volkswagen Escarabajo y fundador de Porsche</li>
-                <li><strong>Soichiro Honda</strong> - Fundador de Honda, pionero en motocicletas y automóviles eficientes</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Sección de Marcas -->
-    <section id="marcas">
-        <div class="container">
-            <div class="section-title">
-                <h2>Marcas de Automóviles</h2>
-                <p>Descubre los fabricantes que han definido la industria con su innovación, diseño y rendimiento.</p>
-            </div>
-            
-            <h3>Marcas Alemanas</h3>
-            <div class="card-container">
-                <article class="card">
-                    <div class="card-img"><img src="https://www.edmunds.com/assets/m/cs/blt5b9136f6669827e3/640fb520a43dca105a6868cf/2024_Mecedes_Benz_GLC_Coupe_2_1600.jpg" alt="Mercedes-Benz"></div>
-                    <div class="card-content"><h3>Mercedes-Benz</h3><p>Sinónimo de lujo, innovación y calidad, conocida por sus vehículos premium y su éxito en la Fórmula 1.</p></div>
-                </article>
-                <article class="card">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=250&fit=crop" alt="BMW"></div>
-                    <div class="card-content"><h3>BMW</h3><p>Famosa por sus "máquinas de conducción" que combinan deportividad, elegancia y tecnología de vanguardia.</p></div>
-                </article>
-                <article class="card">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400&h=250&fit=crop" alt="Audi"></div>
-                    <div class="card-content"><h3>Audi</h3><p>Conocida por su lema "Vorsprung durch Technik" y sus icónicos sistemas de tracción integral Quattro.</p></div>
-                </article>
-            </div>
-
-            <h3>Marcas Italianas</h3>
-            <div class="card-container">
-                <article class="card">
-                    <div class="card-img"><img src="http://www.hdcarwallpapers.com/walls/2017_ferrari_812_superfast-HD.jpg" alt="Ferrari"></div>
-                    <div class="card-content"><h3>Ferrari</h3><p>El fabricante de superdeportivos más prestigioso del mundo, con una rica historia en competición.</p></div>
-                </article>
-                <article class="card">
-                    <div class="card-img"><img src="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2022/12/lamborghini-veneno-roadster-2913858.jpg?tf=1920x" alt="Lamborghini"></div>
-                    <div class="card-content"><h3>Lamborghini</h3><p>Conocida por sus diseños audaces, rendimiento extremo y una rivalidad legendaria con Ferrari.</p></div>
-                </article>
-                <article class="card">
-                    <div class="card-img"><img src="https://cdn.prod.www.spiegel.de/images/eadb5aef-47ae-44db-a799-d34b1958972f_w1600_r1.499267935578331_fpx38.02_fpy55.jpg" alt="Maserati"></div>
-                    <div class="card-content"><h3>Maserati</h3><p>Combina lujo italiano y alto rendimiento, reconocible por su emblemático tridente.</p></div>
-                </article>
-            </div>
-
-            <h3>Marcas Americanas</h3>
-            <div class="card-container">
-                <article class="card">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1603584940943-2e42a5353c84?w=400&h=250&fit=crop" alt="Ford"></div>
-                    <div class="card-content"><h3>Ford</h3><p>Revolucionó la industria con la producción en cadena. Creadora de iconos como el Mustang y la F-150.</p></div>
-                </article>
-                <article class="card">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=250&fit=crop" alt="Chevrolet"></div>
-                    <div class="card-content"><h3>Chevrolet</h3><p>Conocida por modelos legendarios como el Corvette y el Camaro, símbolos del "muscle car" americano.</p></div>
-                </article>
-                <article class="card">
-                    <div class="card-img"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=250&fit=crop" alt="Tesla"></div>
-                    <div class="card-content"><h3>Tesla</h3><p>Pionera en vehículos eléctricos de alto rendimiento y tecnología de conducción autónoma.</p></div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Tecnología -->
-    <section id="tecnologia">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tecnología Automotriz</h2>
-                <p>Las innovaciones que definen la seguridad, el rendimiento y la eficiencia de los coches modernos.</p>
-            </div>
-            <div class="tech-features">
-                <div class="tech-item">
-                    <div class="tech-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <div class="tech-content"><h3>Propulsión Eléctrica</h3><p>Motores silenciosos, aceleración instantánea y cero emisiones locales que están redefiniendo la conducción.</p></div>
+        <main id="page-content">
+            <!-- Cabecera de la página -->
+            <header>
+                <div class="header-content container">
+                    <a href="#inicio" class="logo"><h1>Mundo Automotriz</h1></a>
+                    <nav>
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li class="dropdown">
+                                <a href="destacados.html">Destacados <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                                <a href="#">Explorar <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="destacados.html">Modelos Destacados</a></li>
+                                    <li><a href="#historia">Historia</a></li>
+                                    <li><a href="tienda.html">Tienda</a></li>
+                                    <li><a href="#tecnologia">Tecnología</a></li>
+                                     <li><a href="#testimonios">Testimonios</a></li>
+                                     <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="#competicion">Competición</a></li>
+                                    <li><a href="#futuro">Futuro</a></li>
+                                    <li><a href="#video-showcase">Video Showcase</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="marcas.html">Marcas</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="#testimonios">Testimonios</a></li>
+                            <li><a href="tienda.html">Tienda</a></li>
+                            <li><a href="tecnologia.html">Tecnología</a></li>
+                            <li><a href="#video-showcase">Video</a></li>
+                            <li><a href="#competicion">Competición</a></li>
+                            <li><a href="#futuro">Futuro</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                                    <li><a href="#competicion">Competición</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#galeria">Galería</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    <button class="mobile-menu-btn" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
-                <div class="tech-item">
-                    <div class="tech-icon"><i class="fa-solid fa-brain"></i></div>
-                    <div class="tech-content"><h3>Conducción Autónoma</h3><p>Sistemas avanzados de asistencia (ADAS) que son el primer paso hacia un futuro de vehículos 100% autónomos.</p></div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div class="tech-content"><h3>Seguridad Activa</h3><p>Tecnologías como el frenado de emergencia y el control de estabilidad que previenen accidentes antes de que ocurran.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </header>
 
-    <!-- Sección de Competición -->
-    <section id="competicion">
-        <div class="container">
-            <div class="section-title">
-                <h2>Automovilismo Deportivo</h2>
-                <p>La máxima expresión de la velocidad, la tecnología y la pasión por los coches.</p>
-            </div>
-            <h3>Fórmula 1</h3>
-            <p>La categoría reina del automovilismo, donde compiten los mejores pilotos del mundo con los monoplazas más avanzados tecnológicamente.</p>
-            <img src="https://www.formula1.com/etc/designs/fom-website/social/f1-default-share.jpg" alt="Fórmula 1" class="rounded-lg shadow-lg mb-3" style="max-width: 100%; height: auto;">
-            
-            <h3>Rally (WRC)</h3>
-            <p>Competición al límite en carreteras de tierra, asfalto o nieve, donde la habilidad del piloto es tan crucial como la máquina.</p>
-            <img src="https://images.unsplash.com/photo-1600779635277-c85a7c005b6a?w=600&h=300&fit=crop" alt="Automóvil de rally" class="rounded-lg shadow-lg mb-3" style="max-width: 100%; height: auto;">
-
-            <h3>Resistencia (WEC)</h3>
-            <p>Carreras de larga duración como las 24 Horas de Le Mans, que prueban la fiabilidad de los automóviles y la resistencia de los equipos.</p>
-            <img src="https://images.unsplash.com/photo-1656399336338-95a06993c52e?w=600&h=300&fit=crop" alt="Carrera de Resistencia WEC" class="rounded-lg shadow-lg mb-3" style="max-width: 100%; height: auto;">
-        </div>
-    </section>
-
-    <!-- Sección del Futuro -->
-    <section id="futuro">
-        <div class="container">
-            <div class="section-title">
-                <h2>El Futuro del Automóvil</h2>
-                <p>Exploramos las tendencias que están moldeando la movilidad del mañana: autonomía, electrificación y sostenibilidad.</p>
-            </div>
-            <h3>Vehículos Autónomos y Conectados</h3>
-            <p>La conducción autónoma promete revolucionar la movilidad, reduciendo accidentes y transformando nuestra relación con el transporte. Los coches se están convirtiendo en dispositivos conectados, capaces de comunicarse entre sí y con la infraestructura (V2X).</p>
-            <img src="https://images.unsplash.com/photo-1614029263921-634b38c1a1d6?w=500&h=300&fit=crop" alt="Interior de coche autónomo" class="rounded-lg shadow-lg mb-3" style="max-width: 100%; height: auto;">
-
-            <h3>Movilidad Eléctrica y Sostenible</h3>
-            <p>La transición hacia vehículos cero emisiones es imparable. Las innovaciones en baterías de estado sólido, carga ultrarrápida y el uso de materiales reciclados están haciendo que la movilidad eléctrica sea más accesible y sostenible que nunca.</p>
-            <img src="https://images.unsplash.com/photo-1617802329332-5628c6a1884b?w=500&h=300&fit=crop" alt="Punto de carga para vehículo eléctrico" class="rounded-lg shadow-lg mb-3" style="max-width: 100%; height: auto;">
-        </div>
-    </section>
-
-    <!-- Sección de Galería -->
-    <section id="galeria">
-        <div class="container">
-            <div class="section-title">
-                <h2>Galería de Iconos</h2>
-                <p>Una selección de imágenes que capturan la belleza y la emoción del mundo del motor.</p>
-            </div>
-            <div class="gallery">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=300&h=200&fit=crop" alt="Ford Mustang 1967"><div class="gallery-overlay"><h4>Ford Mustang 1967</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&h=200&fit=crop" alt="Ferrari 250 GTO"><div class="gallery-overlay"><h4>Ferrari 250 GTO</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&h=200&fit=crop" alt="Porsche 911 1973"><div class="gallery-overlay"><h4>Porsche 911 1973</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1617531322498-6f5744233a36?w=300&h=200&fit=crop" alt="Lamborghini Miura"><div class="gallery-overlay"><h4>Lamborghini Miura</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1611859266223-35a839390164?w=300&h=200&fit=crop" alt="Porsche 911 Turbo S"><div class="gallery-overlay"><h4>Porsche 911 Turbo S</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1625513629993-a8a2b53f69b6?w=300&h=200&fit=crop" alt="McLaren 720S"><div class="gallery-overlay"><h4>McLaren 720S</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541899481282-d48a38c4c18e?w=300&h=200&fit=crop" alt="Tesla Model S"><div class="gallery-overlay"><h4>Tesla Model S</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1624641549463-49a33dce6f6a?w=300&h=200&fit=crop" alt="Porsche Taycan"><div class="gallery-overlay"><h4>Porsche Taycan</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1631125915902-d8abe9350b9a?w=300&h=200&fit=crop" alt="Audi e-tron GT"><div class="gallery-overlay"><h4>Audi e-tron GT</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1692362772135-942383a4d5ce?w=300&h=200&fit=crop" alt="Mercedes Vision AVTR"><div class="gallery-overlay"><h4>Mercedes Vision AVTR</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1631125915902-d8abe9350b9a?w=300&h=200&fit=crop" alt="BMW Vision Next 100"><div class="gallery-overlay"><h4>BMW Vision Next 100</h4></div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1631125915902-d8abe9350b9a?w=300&h=200&fit=crop" alt="Pininfarina Battista"><div class="gallery-overlay"><h4>Pininfarina Battista</h4></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Contacto -->
-    <section id="contacto">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contacto</h2>
-                <p>¿Tienes preguntas, comentarios o sugerencias? ¡Nos encantaría escucharte!</p>
-            </div>
-            <form action="#" method="post" class="contact-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+            <section id="inicio" class="hero">
+                <div class="hero-content container">
+                    <h2>Bienvenido al Mundo Automotriz</h2>
+                    <p>
+                        Explora el fascinante universo de los automóviles, desde
+                        sus orígenes hasta las tecnologías del futuro.
+                    </p>
+                    <a href="#historia" class="btn btn-lg"
+                        >Comenzar a Explorar</a
+                    >
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="asunto">Asunto:</label>
-                    <select id="asunto" name="asunto" class="form-control">
-                        <option value="consulta">Consulta General</option>
-                        <option value="sugerencia">Sugerencia</option>
-                        <option value="colaboracion">Propuesta de Colaboración</option>
-                        <option value="publicidad">Publicidad</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" class="form-control" required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-lg">Enviar Mensaje</button>
-                    <!-- Contenedor para mensajes de éxito o error -->
-                    <div id="form-message" class="mt-2"></div>
-                </div>
-            </form>
-        </div>
-    </section>
+            </section>
 
-    <!-- Pie de página -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Mundo Automotriz</h3>
-                    <p>Tu portal de referencia sobre el fascinante mundo de los automóviles, desde los clásicos hasta el futuro de la movilidad.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Navegación</h3>
+            <section id="historia">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Historia del Automóvil</h2>
+                        <p>
+                            Un viaje desde el primer motor de combustión hasta
+                            la era de la electrificación y la conectividad.
+                        </p>
+                    </div>
+                    <h3>Los Primeros Automóviles</h3>
+                    <p>
+                        El automóvil, tal como lo conocemos hoy, fue inventado a
+                        finales del siglo XIX. El primer vehículo motorizado fue
+                        creado por Karl Benz en 1886.
+                    </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1615237901394-24d116169a26?w=500&h=300&fit=crop"
+                        alt="Primer automóvil de Karl Benz"
+                        class="rounded-lg shadow-lg mb-3"
+                        style="max-width: 100%; height: auto;"
+                        width="500"
+                        height="300"
+                        loading="lazy"
+                    />
+
+                    <h3>Evolución a Través del Tiempo</h3>
+                    <p>
+                        A lo largo del siglo XX, el automóvil experimentó una
+                        evolución constante, pasando de ser un lujo para pocos a
+                        un medio de transporte masivo.
+                    </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1517524206127-48bbd363f3a7?w=500&h=300&fit=crop"
+                        alt="Evolución del automóvil"
+                        class="rounded-lg shadow-lg mb-3"
+                        style="max-width: 100%; height: auto;"
+                        width="500"
+                        height="300"
+                        loading="lazy"
+                    />
+
+                    <p>
+                        Desde la producción en cadena de Henry Ford que
+                        democratizó el acceso al automóvil, pasando por la era
+                        dorada del diseño en los 50 y 60, hasta la crisis del
+                        petróleo que impulsó la eficiencia en los 70. El final
+                        del siglo XX vio la llegada de la electrónica, y el
+                        siglo XXI nos ha traído la era de la conectividad, los
+                        vehículos híbridos, eléctricos y el inicio de la
+                        conducción autónoma.
+                    </p>
+
+                    <h3>Inventores Pioneros</h3>
+                    <p>
+                        Estos son algunos de los nombres que cambiaron el mundo
+                        sobre ruedas.
+                    </p>
                     <ul>
-                        <li><a href="#historia">Historia</a></li>
-                        <li><a href="#marcas">Marcas</a></li>
-                        <li><a href="#tecnologia">Tecnología</a></li>
-                        <li><a href="#futuro">Futuro</a></li>
+                        <li>
+                            <strong>Karl Benz</strong> - Creador del primer
+                            automóvil con motor de combustión interna (1886)
+                        </li>
+                        <li>
+                            <strong>Gottlieb Daimler</strong> - Desarrolló el
+                            primer motor de cuatro tiempos (1889)
+                        </li>
+                        <li>
+                            <strong>Henry Ford</strong> - Revolucionó la
+                            producción con la cadena de montaje (1913)
+                        </li>
+                        <li>
+                            <strong>Ferdinand Porsche</strong> - Diseñador del
+                            Volkswagen Escarabajo y fundador de Porsche
+                        </li>
+                        <li>
+                            <strong>Soichiro Honda</strong> - Fundador de Honda,
+                            pionero en motocicletas y automóviles eficientes
+                        </li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Contacto</h3>
-                    <p>info@mundoautomotriz.com</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </section>
+
+            <!-- Sección de Marcas -->
+            <section id="marcas">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Marcas de Automóviles</h2>
+                        <p>
+                            Descubre los fabricantes que han definido la
+                            industria con su innovación, diseño y rendimiento.
+                        </p>
+                    </div>
+
+                    <h3>Marcas Alemanas</h3>
+                    <div class="card-container">
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://www.edmunds.com/assets/m/cs/blt5b9136f6669827e3/640fb520a43dca105a6868cf/2024_Mecedes_Benz_GLC_Coupe_2_1600.jpg"
+                                    alt="Mercedes-Benz"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Mercedes-Benz</h3>
+                                <p>
+                                    Sinónimo de lujo, innovación y calidad,
+                                    conocida por sus vehículos premium y su
+                                    éxito en la Fórmula 1.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=250&fit=crop"
+                                    alt="BMW"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>BMW</h3>
+                                <p>
+                                    Famosa por sus "máquinas de conducción" que
+                                    combinan deportividad, elegancia y
+                                    tecnología de vanguardia.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=400&h=250&fit=crop"
+                                    alt="Audi"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Audi</h3>
+                                <p>
+                                    Conocida por su lema "Vorsprung durch
+                                    Technik" y sus icónicos sistemas de tracción
+                                    integral Quattro.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="marcas.html" class="btn"
+                            >Ver Todas las Marcas
+                            <i class="fa-solid fa-arrow-right"></i
+                        ></a>
+                    </div>
+
+                    <h3>Marcas Italianas</h3>
+                    <div class="card-container">
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="http://www.hdcarwallpapers.com/walls/2017_ferrari_812_superfast-HD.jpg"
+                                    alt="Ferrari"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Ferrari</h3>
+                                <p>
+                                    El fabricante de superdeportivos más
+                                    prestigioso del mundo, con una rica historia
+                                    en competición.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2022/12/lamborghini-veneno-roadster-2913858.jpg?tf=1920x"
+                                    alt="Lamborghini"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Lamborghini</h3>
+                                <p>
+                                    Conocida por sus diseños audaces,
+                                    rendimiento extremo y una rivalidad
+                                    legendaria con Ferrari.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://cdn.prod.www.spiegel.de/images/eadb5aef-47ae-44db-a799-d34b1958972f_w1600_r1.499267935578331_fpx38.02_fpy55.jpg"
+                                    alt="Maserati"
+                                    width="400"
+                                    height="250"
+                                     loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Maserati</h3>
+                                <p>
+                                    Combina lujo italiano y alto rendimiento,
+                                    reconocible por su emblemático tridente.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <h3>Marcas Americanas</h3>
+                    <div class="card-container">
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1603584940943-2e42a5353c84?w=400&h=250&fit=crop"
+                                    alt="Ford"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Ford</h3>
+                                <p>
+                                    Revolucionó la industria con la producción
+                                    en cadena. Creadora de iconos como el
+                                    Mustang y la F-150.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=400&h=250&fit=crop"
+                                    alt="Chevrolet"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Chevrolet</h3>
+                                <p>
+                                    Conocida por modelos legendarios como el
+                                    Corvette y el Camaro, símbolos del "muscle
+                                    car" americano.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <div class="card-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=250&fit=crop"
+                                    alt="Tesla"
+                                    width="400"
+                                    height="250"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="card-content">
+                                <h3>Tesla</h3>
+                                <p>
+                                    Pionera en vehículos eléctricos de alto
+                                    rendimiento y tecnología de conducción
+                                    autónoma.
+                                </p>
+                            </div>
+                        </article>
                     </div>
                 </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 Mundo Automotriz. Todos los derechos reservados.</p>
-                <p><a href="#inicio">Volver al inicio</a></p>
-            </div>
+            </section>
+
+            <!-- Sección de Tecnología -->
+            <section id="tecnologia">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Tecnología Automotriz</h2>
+                        <p>
+                            Las innovaciones que definen la seguridad, el
+                            rendimiento y la eficiencia de los coches modernos.
+                        </p>
+                    </div>
+                    <div class="tech-features">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div class="tech-content">
+                                <h3>Propulsión Eléctrica</h3>
+                                <p>
+                                    Motores silenciosos, aceleración instantánea
+                                    y cero emisiones locales que están
+                                    redefiniendo la conducción.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div class="tech-content">
+                                <h3>Conducción Autónoma</h3>
+                                <p>
+                                    Sistemas avanzados de asistencia (ADAS) que
+                                    son el primer paso hacia un futuro de
+                                    vehículos 100% autónomos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div class="tech-content">
+                                <h3>Seguridad Activa</h3>
+                                <p>
+                                    Tecnologías como el frenado de emergencia y
+                                    el control de estabilidad que previenen
+                                    accidentes antes de que ocurran.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Competición -->
+            <section id="competicion">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Automovilismo Deportivo</h2>
+                        <p>
+                            La máxima expresión de la velocidad, la tecnología y
+                            la pasión por los coches.
+                        </p>
+                    </div>
+                    <h3>Fórmula 1</h3>
+                    <p>
+                        La categoría reina del automovilismo, donde compiten los
+                        mejores pilotos del mundo con los monoplazas más
+                        avanzados tecnológicamente.
+                    </p>
+                    <img
+                        src="https://www.formula1.com/etc/designs/fom-website/social/f1-default-share.jpg"
+                        alt="Fórmula 1"
+                        class="rounded-lg shadow-lg mb-3"
+                        style="max-width: 100%; height: auto;"
+                        width="1200"
+                        height="630"
+                        loading="lazy"
+                    />
+
+                    <h3>Rally (WRC)</h3>
+                    <p>
+                        Competición al límite en carreteras de tierra, asfalto o
+                        nieve, donde la habilidad del piloto es tan crucial como
+                        la máquina.
+                    </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1600779635277-c85a7c005b6a?w=600&h=300&fit=crop"
+                        alt="Automóvil de rally"
+                        class="rounded-lg shadow-lg mb-3"
+                        style="max-width: 100%; height: auto;"
+                        width="600"
+                        height="300"
+                        loading="lazy"
+                    />
+
+                    <h3>Resistencia (WEC)</h3>
+                    <p>
+                        Carreras de larga duración como las 24 Horas de Le Mans,
+                        que prueban la fiabilidad de los automóviles y la
+                        resistencia de los equipos.
+                    </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1656399336338-95a06993c52e?w=600&h=300&fit=crop"
+                        alt="Carrera de Resistencia WEC"
+                        class="rounded-lg shadow-lg mb-3"
+                        style="max-width: 100%; height: auto;"
+                        width="600"
+                        height="300"
+                        loading="lazy"
+                    />
+                </div>
+            </section>
+
+            <!-- Sección del Futuro -->
+            <section id="futuro">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>El Futuro del Automóvil</h2>
+                        <p>
+                            Exploramos las tendencias que están moldeando la
+                            movilidad del mañana: autonomía, electrificación y
+                            sostenibilidad.
+                        </p>
+                    </div>
+                    <h3>Vehículos Autónomos y Conectados</h3>
+                    <p>
+                        La conducción autónoma promete revolucionar la
+                        movilidad, reduciendo accidentes y transformando nuestra
+                        relación con el transporte. Los coches se están
+                        convirtiendo en dispositivos conectados, capaces de
+                        comunicarse entre sí y con la infraestructura (V2X).
+                    </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1614029263921-634b38c1a1d6?w=500&h=300&fit=crop"
+                        alt="Interior de coche autónomo"
+                        class="rounded-lg shadow-lg mb-3"
+                        style="max-width: 100%; height: auto;"
+                        width="500"
+                        height="300"
+                        loading="lazy"
+                    />
+
+                    <h3>Movilidad Eléctrica y Sostenible</h3>
+                    <p>
+                        La transición hacia vehículos cero emisiones es
+                        imparable. Las innovaciones en baterías de estado
+                        sólido, carga ultrarrápida y el uso de materiales
+                        reciclados están haciendo que la movilidad eléctrica sea
+                        más accesible y sostenible que nunca.
+                    </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1617802329332-5628c6a1884b?w=500&h=300&fit=crop"
+                        alt="Punto de carga para vehículo eléctrico"
+                        class="rounded-lg shadow-lg mb-3"
+                        style="max-width: 100%; height: auto;"
+                        width="500"
+                        height="300"
+                        loading="lazy"
+                    />
+                </div>
+            </section>
+
+            <!-- Sección de Video Showcase -->
+            <section id="video-showcase">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Siente la Emoción</h2>
+                        <p>
+                            Sube el volumen y disfruta de la sinfonía de la
+                            ingeniería en movimiento.
+                        </p>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/3o_3t3aO8M4?si=__GgY3-0xL09hY_a&amp;controls=0&amp;modestbranding=1&amp;rel=0"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Galería -->
+            <section id="galeria">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Galería de Iconos</h2>
+                        <p>
+                            Una selección de imágenes que capturan la belleza y
+                            la emoción del mundo del motor.
+                        </p>
+                    </div>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=300&h=200&fit=crop"
+                                alt="Ford Mustang 1967"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Ford Mustang 1967</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=300&h=200&fit=crop"
+                                alt="Ferrari 250 GTO"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Ferrari 250 GTO</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&h=200&fit=crop"
+                                alt="Porsche 911 1973"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Porsche 911 1973</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1617531322498-6f5744233a36?w=300&h=200&fit=crop"
+                                alt="Lamborghini Miura"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Lamborghini Miura</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1611859266223-35a839390164?w=300&h=200&fit=crop"
+                                alt="Porsche 911 Turbo S"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Porsche 911 Turbo S</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1625513629993-a8a2b53f69b6?w=300&h=200&fit=crop"
+                                alt="McLaren 720S"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>McLaren 720S</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1541899481282-d48a38c4c18e?w=300&h=200&fit=crop"
+                                alt="Tesla Model S"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Tesla Model S</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1624641549463-49a33dce6f6a?w=300&h=200&fit=crop"
+                                alt="Porsche Taycan"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Porsche Taycan</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1631125915902-d8abe9350b9a?w=300&h=200&fit=crop"
+                                alt="Audi e-tron GT"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Audi e-tron GT</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1692362772135-942383a4d5ce?w=300&h=200&fit=crop"
+                                alt="Mercedes Vision AVTR"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Mercedes Vision AVTR</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1631125915902-d8abe9350b9a?w=300&h=200&fit=crop"
+                                alt="Audi e-tron GT"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>Audi e-tron GT</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1599551433842-25b56a51293f?w=300&h=200&fit=crop"
+                                alt="Pininfarina Battista"
+                                width="300"
+                                height="200"
+                                loading="lazy"
+                            />
+                            <div class="gallery-overlay">
+                                <h4>BMW Vision Next 100</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Testimonios -->
+            <section id="testimonios">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>La Voz de la Comunidad</h2>
+                        <p>
+                            Esto es lo que otros apasionados del motor dicen
+                            sobre nosotros.
+                        </p>
+                    </div>
+                    <div class="testimonial-container">
+                        <article class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>
+                                    "¡Increíble! Encuentro los análisis más
+                                    detallados y las noticias más frescas del
+                                    mundo automotriz. Es mi parada obligatoria
+                                    cada mañana."
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img
+                                    src="https://i.pravatar.cc/150?img=12"
+                                    alt="Foto de Carlos"
+                                    class="testimonial-avatar"
+                                />
+                                <h4>Carlos Vega</h4>
+                                <span>Lector Frecuente</span>
+                            </div>
+                        </article>
+                        <article class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>
+                                    "La sección de historia es una joya. He
+                                    aprendido muchísimo sobre los pioneros y la
+                                    evolución de mis marcas favoritas. ¡Sigan
+                                    así!"
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img
+                                    src="https://i.pravatar.cc/150?img=33"
+                                    alt="Foto de Ana"
+                                    class="testimonial-avatar"
+                                />
+                                <h4>Ana Torres</h4>
+                                <span>Entusiasta de Clásicos</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MEGA ACTUALIZACIÓN: Sección de Noticias -->
+            <section id="noticias">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Últimas Noticias</h2>
+                        <p>
+                            Mantente al día con las últimas novedades, análisis
+                            y reportajes del mundo del motor.
+                        </p>
+                    </div>
+                    <div class="card-container" id="posts-container">
+                        <!-- Los artículos del blog se cargarán aquí dinámicamente -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Suscripción -->
+            <section id="suscripcion">
+                <div class="container">
+                    <div class="subscription-box">
+                        <h3>Únete a la Carrera</h3>
+                        <p>
+                            Suscríbete a nuestro boletín y recibe las últimas
+                            noticias y análisis directamente en tu correo.
+                        </p>
+                        <form id="subscription-form" class="subscription-form">
+                            <input
+                                type="email"
+                                id="sub-email"
+                                placeholder="Tu correo electrónico"
+                                required
+                            />
+                            <button type="submit" class="btn">Suscribirme</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Preguntas Frecuentes (FAQ) -->
+            <section id="faq">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Preguntas Frecuentes</h2>
+                        <p>
+                            Resolvemos algunas de las dudas más comunes en el
+                            mundo del motor.
+                        </p>
+                    </div>
+                    <div class="faq-container">
+                        <details class="faq-item">
+                            <summary>
+                                <h4>
+                                    ¿Cuál es la diferencia entre un coche
+                                    híbrido y uno eléctrico?
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-content">
+                                <p>
+                                    Un <strong>coche eléctrico (EV)</strong>
+                                    funciona exclusivamente con un motor
+                                    eléctrico alimentado por una batería
+                                    recargable. No tiene motor de combustión y
+                                    no produce emisiones. Un
+                                    <strong>coche híbrido (HEV)</strong> combina
+                                    un motor de combustión interna
+                                    (gasolina/diésel) con uno o más motores
+                                    eléctricos. Puede funcionar solo con
+                                    electricidad, solo con el motor de
+                                    combustión, o con ambos a la vez para
+                                    maximizar la eficiencia.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <h4>
+                                    ¿Qué significa "torque" y por qué es
+                                    importante?
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-content">
+                                <p>
+                                    El <strong>torque (o par motor)</strong> es
+                                    una medida de la fuerza de torsión que el
+                                    motor puede generar. En términos sencillos,
+                                    es la "fuerza de empuje" que sientes al
+                                    acelerar desde parado. Un torque alto a
+                                    bajas revoluciones (RPM) es ideal para
+                                    remolcar cargas pesadas o para una
+                                    aceleración rápida, algo característico de
+                                    los motores diésel y eléctricos.
+                                </p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <h4>
+                                    ¿Es realmente más caro mantener un coche
+                                    eléctrico?
+                                </h4>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </summary>
+                            <div class="faq-content">
+                                <p>
+                                    A corto plazo, el precio de compra suele ser
+                                    mayor. Sin embargo, a largo plazo, el
+                                    mantenimiento de un coche eléctrico es
+                                    generalmente más barato. No necesita cambios
+                                    de aceite, tiene muchas menos piezas móviles
+                                    (sin correas, bujías, etc.) y el desgaste de
+                                    los frenos es menor gracias al frenado
+                                    regenerativo. El "combustible" (electricidad)
+                                    también suele ser más económico que la
+                                    gasolina.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Contacto -->
+            <section id="contacto">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Contacto</h2>
+                        <p>
+                            ¿Tienes preguntas, comentarios o sugerencias? ¡Nos
+                            encantaría escucharte!
+                        </p>
+                    </div>
+                    <form action="#" method="post" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                class="form-control"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto:</label>
+                            <select
+                                id="asunto"
+                                name="asunto"
+                                class="form-control"
+                            >
+                                <option value="consulta">
+                                    Consulta General
+                                </option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="colaboracion">
+                                    Propuesta de Colaboración
+                                </option>
+                                <option value="publicidad">Publicidad</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                rows="5"
+                                class="form-control"
+                                required
+                            ></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-lg">
+                                Enviar Mensaje
+                            </button>
+                            <!-- Contenedor para mensajes de éxito o error -->
+                            <div id="form-message" class="mt-2"></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Pie de página -->
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-column">
+                            <h3>Mundo Automotriz</h3>
+                            <p>
+                                Tu portal de referencia sobre el fascinante
+                                mundo de los automóviles, desde los clásicos
+                                hasta el futuro de la movilidad.
+                            </p>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Navegación</h3>
+                            <ul>
+                                <li><a href="#historia">Historia</a></li>
+                                <li><a href="marcas.html">Marcas</a></li>
+                                <li><a href="#tecnologia">Tecnología</a></li>
+                                <li><a href="#futuro">Futuro</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Contacto</h3>
+                            <p>info@mundoautomotriz.com</p>
+                            <div class="social-links">
+                                <a href="#" aria-label="Facebook"
+                                    ><i class="fab fa-facebook-f"></i
+                                ></a>
+                                <a href="#" aria-label="Twitter"
+                                    ><i class="fab fa-twitter"></i
+                                ></a>
+                                <a href="#" aria-label="Instagram"
+                                    ><i class="fab fa-instagram"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>
+                            &copy; 2024 Mundo Automotriz. Todos los derechos
+                            reservados.
+                        </p>
+                        <p>
+                            <a href="#inicio">Volver al inicio</a> |
+                            <a href="/admin.html" target="_blank">Admin</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="script.js"></script>
+
+        <!-- Visor de Imágenes (Lightbox) -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-btn">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" />
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+            <a class="prev-btn">&#10094;</a>
+            <a class="next-btn">&#10095;</a>
         </div>
-    </footer>
-</main>
-<script src="script.js"></script>
-</body>
+
+    </body>
 </html>

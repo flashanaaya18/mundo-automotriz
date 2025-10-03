@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin - Mundo Automotriz</title>
+        <link rel="stylesheet" href="estilos.css" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <!-- Google Fonts: Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Script del Editor de Texto Enriquecido (TinyMCE) -->
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+        <style>
+            /* Estilos específicos para la página de admin */
+            body {
+                background-color: #0d1b2a;
+            }
+            .admin-container {
+                padding: 4rem 1.5rem;
+            }
+            #login-section,
+            #messages-section {
+                max-width: 900px;
+                margin: 2rem auto;
+                background: rgba(27, 47, 69, 0.8);
+                padding: 2.5rem;
+                border-radius: var(--border-radius-lg);
+                backdrop-filter: blur(10px);
+            }
+            #messages-section {
+                display: none;
+            } /* Oculto por defecto */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 2rem;
+            }
+            th,
+            td {
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                text-align: left;
+            }
+            th {
+                color: var(--primary);
+            }
+            td {
+                font-size: 0.9rem;
+            }
+            .logout-btn {
+                margin-top: 1rem;
+            }
+            #create-post-section {
+                display: none; /* Oculto por defecto */
+                margin-top: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main id="page-content">
+            <div class="admin-container container">
+                <div id="login-section">
+                    <h2 class="section-title">Acceso de Administrador</h2>
+                    <form
+                        id="login-form"
+                        class="contact-form"
+                        style="
+                            padding: 2rem 0;
+                            background: none;
+                            box-shadow: none;
+                            backdrop-filter: none;
+                        "
+                    >
+                        <div class="form-group">
+                            <label for="password">Contraseña:</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-control"
+                                required
+                            />
+                        </div>
+                        <button type="submit" class="btn">
+                            Iniciar Sesión
+                        </button>
+                        <div id="login-message" class="mt-2"></div>
+                    </form>
+                </div>
+
+                <div id="messages-section">
+                    <h2 class="section-title">Mensajes Recibidos</h2>
+                    <button id="show-create-post-btn" class="btn btn-sm">Crear Nuevo Artículo</button>
+                    <div id="messages-list"></div>
+                    <button id="logout-btn" class="btn btn-secondary btn-sm">
+                        Cerrar Sesión
+                    </button>
+                </div>
+
+                <!-- MEGA ACTUALIZACIÓN: Sección para crear posts -->
+                <div id="create-post-section">
+                    <h2 class="section-title">Crear Nuevo Artículo</h2>
+                    <form id="create-post-form" class="contact-form" style="padding: 2rem 0; background: none; box-shadow: none; backdrop-filter: none;">
+                        <div class="form-group">
+                            <label for="post-title">Título:</label>
+                            <input type="text" id="post-title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-summary">Resumen (Summary):</label>
+                            <textarea id="post-summary" rows="3" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-image">URL de la Imagen de Portada:</label>
+                            <input type="url" id="post-image" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-content">Contenido (acepta HTML):</label>
+                            <textarea id="post-content" rows="10" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Publicar Artículo</button>
+                        <button type="button" id="cancel-post-btn" class="btn btn-secondary">Cancelar</button>
+                        <div id="create-post-message" class="mt-2"></div>
+                    </form>
+                    <button id="back-to-messages-btn" class="btn btn-secondary btn-sm" style="display: none;">
+                        Volver a Mensajes
+                    </button>
+                </div>
+            </div>
+        </main>
+        <script src="admin.js"></script>
+    </body>
+</html>

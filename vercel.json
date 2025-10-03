@@ -1,12 +1,28 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/contact.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    { "src": "/api/contacto", "dest": "/api/contact.js" }
-  ]
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/contact.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "api/login.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "api/messages.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "api/posts.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        { "src": "/api/contacto", "dest": "/api/contact.js" },
+        { "src": "/api/login", "dest": "/api/login.js" },
+        { "src": "/api/messages", "dest": "/api/messages.js" },
+        { "src": "/api/messages/(?<id>[^/]+)", "dest": "/api/messages.js" },
+        { "src": "/api/posts", "dest": "/api/posts.js" }
+    ]
 }

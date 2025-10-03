@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Marcas de Automóviles - Mundo Automotriz</title>
+        <link rel="stylesheet" href="estilos.css" />
+        <!-- Spline Viewer -->
+        <script type="module" src="https://esm.sh/@splinetool/viewer"></script>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Fondo 3D con Spline (igual que en index.html) -->
+        <spline-viewer
+            url="https://prod.spline.design/b422-RI72YvSG3Zp/scene.splinecode"
+            events-target="local"
+        ></spline-viewer>
+
+        <main id="page-content">
+            <!-- Cabecera (reutilizada) -->
+            <header>
+                <div class="header-content container">
+                    <a href="/index.html" class="logo"
+                        ><h1>Mundo Automotriz</h1></a
+                    >
+                    <nav>
+                        <ul>
+                            <li><a href="/index.html">Inicio</a></li>
+                            <li><a href="/blog.html">Blog</a></li>
+                            <li><a href="/marcas.html">Marcas</a></li>
+                            <li><a href="/index.html#galeria">Galería</a></li>
+                            <li><a href="/index.html#contacto">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    <button class="mobile-menu-btn" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Contenido Principal de Marcas -->
+            <section id="marcas-detalle" style="padding-top: 10rem">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Marcas de Automóviles</h2>
+                        <p>
+                            Descubre los fabricantes que han definido la
+                            industria con su innovación, diseño y rendimiento.
+                        </p>
+                    </div>
+
+                    <!-- Marcas Alemanas -->
+                    <h3 class="marca-category-title" id="alemanas">
+                        Marcas Alemanas
+                    </h3>
+                    <article class="marca-banner" id="mercedes-benz">
+                        <img
+                            src="https://images.unsplash.com/photo-1617800213856-93445b2a45c4?w=1200&h=400&fit=crop"
+                            alt="Banner de Mercedes-Benz"
+                            class="marca-banner-img"
+                        />
+                        <div class="marca-banner-content">
+                            <h3>Mercedes-Benz</h3>
+                            <p>
+                                Fundada en 1926, Mercedes-Benz es un ícono
+                                mundial de lujo, ingeniería de precisión y
+                                seguridad. Pionera en numerosas tecnologías,
+                                desde el primer automóvil de producción hasta
+                                los sistemas de seguridad modernos como el ABS y
+                                el airbag. Su gama abarca desde sedanes de lujo
+                                y SUVs hasta superdeportivos bajo la marca AMG
+                                y una creciente línea de vehículos eléctricos
+                                EQ.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="marca-banner" id="bmw">
+                        <img
+                            src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&h=400&fit=crop"
+                            alt="Banner de BMW"
+                            class="marca-banner-img"
+                        />
+                        <div class="marca-banner-content">
+                            <h3>BMW (Bayerische Motoren Werke)</h3>
+                            <p>
+                                Conocida por su eslogan "¿Te gusta conducir?",
+                                BMW se ha centrado en crear vehículos que
+                                ofrecen una experiencia de conducción dinámica
+                                y deportiva. Desde el icónico sedán Serie 3
+                                hasta los potentes modelos 'M' y la innovadora
+                                submarca 'i' de vehículos eléctricos, BMW
+                                combina rendimiento, tecnología y un diseño
+                                distintivo.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="marca-banner" id="audi">
+                        <img
+                            src="https://images.unsplash.com/photo-1541348263662-e35215956185?w=1200&h=400&fit=crop"
+                            alt="Banner de Audi"
+                            class="marca-banner-img"
+                        />
+                        <div class="marca-banner-content">
+                            <h3>Audi</h3>
+                            <p>
+                                Bajo el lema "Vorsprung durch Technik" (A la
+                                vanguardia de la técnica), Audi es famosa por
+                                su sistema de tracción integral Quattro, que
+                                revolucionó el mundo de los rallies. La marca
+                                se distingue por su diseño elegante y minimalista,
+                                interiores de alta calidad y una fuerte apuesta
+                                por la tecnología, incluyendo el Audi Virtual
+                                Cockpit y su gama de coches eléctricos e-tron.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Marcas Italianas -->
+                    <h3 class="marca-category-title" id="italianas">
+                        Marcas Italianas
+                    </h3>
+                    <article class="marca-banner" id="ferrari">
+                        <img
+                            src="https://images.unsplash.com/photo-1625758600923-aed12138b135?w=1200&h=400&fit=crop"
+                            alt="Banner de Ferrari"
+                            class="marca-banner-img"
+                        />
+                        <div class="marca-banner-content">
+                            <h3>Ferrari</h3>
+                            <p>
+                                El nombre más legendario en el mundo de los
+                                superdeportivos y la competición. Fundada por
+                                Enzo Ferrari, la marca del "Cavallino Rampante"
+                                es sinónimo de pasión, rendimiento y exclusividad.
+                                Cada modelo es una obra de arte de la ingeniería,
+                                con un sonido de motor inconfundible y un
+                                legado inigualable en la Fórmula 1.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="marca-banner" id="lamborghini">
+                        <img
+                            src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=1200&h=400&fit=crop"
+                            alt="Banner de Lamborghini"
+                            class="marca-banner-img"
+                        />
+                        <div class="marca-banner-content">
+                            <h3>Lamborghini</h3>
+                            <p>
+                                Nacida de la rivalidad con Ferrari, Lamborghini
+                                se ha forjado una identidad propia con diseños
+                                extravagantes, agresivos y futuristas. Desde el
+                                Miura, considerado el primer superdeportivo de
+                                motor central, hasta los modernos Aventador y
+                                Huracán, Lamborghini representa la audacia y el
+                                rendimiento extremo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Marcas Americanas -->
+                    <h3 class="marca-category-title" id="americanas">
+                        Marcas Americanas
+                    </h3>
+                    <article class="marca-banner" id="ford">
+                        <img
+                            src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&h=400&fit=crop"
+                            alt="Banner de Ford"
+                            class="marca-banner-img"
+                        />
+                        <div class="marca-banner-content">
+                            <h3>Ford</h3>
+                            <p>
+                                Ford no solo motorizó América con el Modelo T y
+                                la línea de ensamblaje, sino que también creó
+                                algunos de los vehículos más icónicos de la
+                                historia. El Ford Mustang definió la categoría
+                                "pony car", mientras que la camioneta F-150 ha
+                                sido el vehículo más vendido en EE. UU. durante
+                                décadas. Hoy, Ford está liderando la transición
+                                eléctrica con modelos como el Mustang Mach-E.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="marca-banner" id="tesla">
+                        <img
+                            src="https://images.unsplash.com/photo-1664379391695-b3de57f65b59?w=1200&h=400&fit=crop"
+                            alt="Banner de Tesla"
+                            class="marca-banner-img"
+                        />
+                        <div class="marca-banner-content">
+                            <h3>Tesla</h3>
+                            <p>
+                                Tesla ha revolucionado la industria automotriz
+                                moderna, demostrando que los vehículos
+                                eléctricos pueden ser deseables, de alto
+                                rendimiento y tecnológicamente avanzados. Con
+                                su red de Supercargadores y su software de
+                                conducción autónoma (Autopilot), Tesla ha
+                                redefinido lo que un coche puede ser y ha
+                                acelerado la transición mundial hacia la
+                                energía sostenible.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Pie de página -->
+            <footer>
+                <div class="container">
+                    <div class="copyright">
+                        <p>
+                            &copy; 2024 Mundo Automotriz. Todos los derechos
+                            reservados.
+                        </p>
+                        <p>
+                            <a href="#page-content">Volver al inicio</a> |
+                            <a href="/admin.html" target="_blank">Admin</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="marcas.js"></script>
+        <script src="script.js"></script>
+        <!-- Para el menú móvil -->
+    </body>
+</html>
